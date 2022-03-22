@@ -8,17 +8,19 @@
     body {
     background-color:rgb(233, 214, 44);
     font-family: sans-serif;
-    margin-left: 10%;
-    margin-right: 10%
   }
 
   .content {
-      border-color:white;
-      border-style: solid;
-      background-color: rgb(216,216,255);
-      padding-bottom: 500px;
-      margin-left: 10%;
-      margin-right: 10%
+    border-color:white;
+    border-style: solid;
+    background-color: rgb(216,216,255);
+    padding-bottom: 350px;
+    margin-right: 50%
+  }
+
+    button {
+    display: inline;
+    margin-right:5px;
   }
 
   hr {
@@ -37,17 +39,23 @@
     <header>
       <h1>Chatroom</h1>
     </header>
-
+    <div class="RGBchange">
+      <button onclick="changeColor()">Change text Color</button></div>
     <div class="input">
       <button onclick="message()"> Send a Message </button>
     </div> <nav class="strong"><p id="output">	</p> </nav>
-
     <!-- inline the script or you'll need to associate the message function directing to a js file -->
     <script>
       function message(){
         var outputObj = document.getElementById("output");
         var msg = prompt("Please enter a message: ", "");
         outputObj.innerHTML = outputObj.innerHTML + msg + "<hr>";
+      }
+
+      function changeColor(){
+        var outputObj = document.getElementById("output");
+        var col = prompt("Please enter the name of the color: ", "");
+        document.querySelector('p').style.color=col;
       }
     </script>
   </div>
