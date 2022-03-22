@@ -15,15 +15,15 @@ const server = http.createServer(function(req, res){
         }
         res.end()
     })
-    fs.readFile('script.js', function(error, data){
-        if(error) {
-            res.writeHead(404)
-            res.write(' Error: File Not Found')
-        }else{
-            res.write(data)
-        }
-        res.end()
-    })
+    // fs.readFile('script.js', function(error, data){
+    //     if(error) {
+    //         res.writeHead(404)
+    //         res.write(' Error: File Not Found')
+    //     }else{
+    //         res.write(data)
+    //     }
+    //     res.end()
+    // })
     fs.readFile('style.css', function(error, data){
         if(error) {
             res.writeHead(404)

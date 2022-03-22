@@ -2,20 +2,30 @@
 <html lang="En">
 <head>
   <meta charset="UTF-8">
-  <title> EECS1012: Lab 5 - computational thinking </title>
-  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
-  <script src="script.js"></script>
+  <title> EECS1012: Lab 5 - computational thinking </title> <!-- HEY THAT IS NOT THIS CLASS! HA!-->
+  <!-- <link rel="stylesheet" type="text/css" href="style.css" title="style" /> -->
+  <link rel="stylesheet" src="styles.css">
+  <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
   <div class="content">
-  <header>
-    <h1>Chatroom</h1>
-  </header>
-  
-	<div class="input">
-	  <button onclick="message()"> Send a Message </button>
-	</div> <nav class="strong"><p id="output">	</p> </nav>
+    <header>
+      <h1>Chatroom</h1>
+    </header>
+
+    <div class="input">
+      <button onclick="message()"> Send a Message </button>
+    </div> <nav class="strong"><p id="output">	</p> </nav>
+
+    <!-- inline the script or you'll need to associate the message function directing to a js file -->
+    <script>
+      function message(){
+        var outputObj = document.getElementById("output");
+        var msg = prompt("Please enter a message: ", "");
+        outputObj.innerHTML = outputObj.innerHTML + msg + "<hr>";
+      }
+    </script>
   </div>
 </body>
 </html>
