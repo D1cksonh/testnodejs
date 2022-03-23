@@ -8,6 +8,7 @@
     body {
     background-color:rgb(233, 214, 44);
     font-family: sans-serif;
+    margin-left: 25%;
   }
 
   .content {
@@ -15,7 +16,7 @@
     border-style: solid;
     background-color: rgb(216,216,255);
     padding-bottom: 350px;
-    margin-right: 50%
+    margin-right: 40%
   }
 
     button {
@@ -40,7 +41,11 @@
       <h1>Chatroom</h1>
     </header>
     <div class="RGBchange">
-      <button onclick="changeColor()">Change text Color</button></div>
+      <button class="button" type="button" onclick="changesketch('sketch.html')">Click to see sketchboard</button>
+    </div>
+    <div class="RGBchange">
+      <button onclick="changeColor()">Change text Color</button>
+    </div>
     <div class="input">
       <button onclick="message()"> Send a Message </button>
     </div> <nav class="strong"><p id="output">	</p> </nav>
@@ -56,6 +61,15 @@
         var outputObj = document.getElementById("output");
         var col = prompt("Please enter the name of the color: ", "");
         document.querySelector('p').style.color=col;
+      }
+
+      function changesketch(url){
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
       }
     </script>
   </div>
