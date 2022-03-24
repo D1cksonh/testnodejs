@@ -41,9 +41,6 @@
       <h1>Chatroom</h1>
     </header>
     <div class="RGBchange">
-      <button class="button" type="button" onclick="changesketch('sketch/sketch.html')">Click to see sketchboard</button>
-    </div>
-    <div class="RGBchange">
       <button onclick="changeColor()">Change text Color</button>
     </div>
     <div class="input">
@@ -61,15 +58,6 @@
         var outputObj = document.getElementById("output");
         var col = prompt("Please enter the name of the color: ", "");
         document.querySelector('p').style.color=col;
-      }
-
-      function changesketch(url){
-        const link = document.createElement('a'); 
-        link.href = url;
-        link.target = '_blank';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
       }
     </script>
   </div>
